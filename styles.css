@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barlow', sans-serif;
+    /* height: 100vh; */
+    font-size: 18px;
+    overflow-x: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: hsl(230, 29%, 20%);
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+.logo{
+    max-width: 24px;
+    max-height: 24px;
+    margin: 1.5rem;
+}
+
+.desktop{
+    display: none;
+}
+
+header ul{
+    list-style: none;
+    
+}
+
+header ul a {
+    text-decoration: none;
+    color: hsl(230, 29%, 20%);
+}
+
+header button{
+    font-family: 'Barlow Condensed', sans-serif;
+    background-color: white;
+    border: none;
+    font-size: 18px;
+    color: hsl(231, 7%, 65%);
+    margin-top: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.close, .open{
+    position: relative;
+    cursor: pointer;
+    padding: 1.5rem;
+}
+.hide{
+    display: none;
+}
+
+.mobile{
+    background-color: hsl(207, 33%, 95%);
+    width: 50%;
+    height: 70vh;
+    text-align: end;
+    border-bottom-left-radius: 4rem;
+}
+.mobile-nav{
+    position: absolute;
+    right: 1.4rem;
+    top: 3rem;
+    background-color: white;
+    width: 90%;
+    padding: 1rem;
+    text-align: center;
+    z-index: 2;
+    border-radius: 5px;
+    margin-top: 1rem;
+    box-shadow: 0px 5px 7px 0px hsl(231, 7%, 65%);
+}
+
+.mobile-nav  li{
+    margin-bottom: 1rem;
+}
+.mobile-nav ul {
+    border-bottom: 2px solid hsl(207, 33%, 95%);
+}
+
+@media screen and (min-width:571px){
+    .mobile{
+        display: none;
+    }
+    
+    .desktop{
+       display: flex;
+       justify-content: center;
+        background-color: hsl(207, 33%, 95%);
+        width: 70%;
+        min-height: 400px;
+        padding: 1rem;
+        border-bottom-left-radius: 4rem;
+        background-size: contain;
+    }
+
+    .desktop  ul {
+        display: flex;
+        padding: 1rem;
+    }
+
+    .desktop ul li{
+        margin: 0 1rem;
+        text-align: center;
+    }
+    
+    header button{
+        font-family: 'Barlow Condensed', sans-serif;
+        background-color: hsl(207, 33%, 95%);
+        /* margin-right: 1rem; */
+        padding: 0 1rem;
+    }
+
+    .dot{
+        display: flex;
+        /* grid-template-columns: 1fr 1fr; */
+    }
+
+    .dot {
+        height: 5px;
+        width: 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+      }
+      .logo{
+        margin: 2rem;
+    }
+    .desktop ul li:hover, header button:hover{
+        text-decoration: underline;
+    }
+ 
+}
+/*********main section*************/
+main{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.main-img {
+    position: absolute;
+    bottom: 50%;
+    left: 4rem;
+}
+.main-img img{
+    width: 100%;
+}
+
+main .new, main h1, .buttons button{
+    font-family: 'Barlow Condensed', sans-serif;
+
+}
+
+main .new:not(span){
+    color: hsl(231, 7%, 65%);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 4px;
+}
+.new span{
+    background-color: hsl(230, 29%, 20%);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 25px;
+}
+
+main h1{
+    color: hsl(230, 29%, 20%);
+    font-weight: 700;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+.main-text{
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main-text p{
+    color: hsl(230, 29%, 20%);
+    margin-bottom: 1rem;
+}
+.buttons button{
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-top:0.5rem ;
+    text-transform: uppercase;
+}
+.buttons button:nth-child(1){
+    background-color: hsl(0, 100%, 68%);
+    color: white;
+    margin-right:0.5rem ;
+    overflow: hidden;
+}
+
+.buttons button:nth-child(2){
+    background-color: white;
+    color: hsl(231, 7%, 65%);
+}
+
+
+@media screen and (min-width:571px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top:-10rem ;
+    }
+    .main-img {
+        position: relative;
+        bottom: 0%;
+        left: 0rem;
+        }
+    .main-img img{
+        min-width: 550px;
+    }
+
+    .main-text{
+        padding: 0 2rem;
+        bottom: 55%;
+    }
+    main h1{
+        font-size: 3rem;
+        margin: 2rem 0;
+        width: 85%;
+    }
+    .main-text p{
+        margin: 2rem 0;
+    }
+    .buttons button:nth-child(1):hover{
+        opacity: 0.7;
+    }
+}
